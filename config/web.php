@@ -14,7 +14,7 @@ $config = [
 			'cost' => 12,
 			'admins' => ['atin'],
 			'mailer' => [
-				'sender'                => ['sigiziatin@gmail.com' => 'SIGIZI'], // or ['no-reply@myhost.com' => 'Sender name']
+				'sender'                => ['sigiziatin@gmail.com' => 'SIGIZI'],
 				'welcomeSubject'        => 'Welcome subject',
 				'confirmationSubject'   => 'Confirmation subject',
 				'reconfirmationSubject' => 'Email change subject',
@@ -43,7 +43,6 @@ $config = [
 			],
 		],
 		'request' => [
-            // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'rdmW_WZbQm8KKk_E9vpKAa0jzO_qwt2N',
         ],
         'cache' => [
@@ -56,13 +55,6 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        /* 'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => true,
-        ], */
 		'mailer' => [
 			'class' => 'yii\swiftmailer\Mailer',
 			'useFileTransport' => false,
@@ -90,7 +82,6 @@ $config = [
 ];
 
 if (YII_ENV_DEV) {
-    // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
