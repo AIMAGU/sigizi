@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\GejalaSearch */
+/* @var $searchModel app\models\BiodataSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Manajemen Gejala';
+$this->title = 'Biodatas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="gejala-index">
+<div class="biodata-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Tambah Gejala', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Biodata', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -24,10 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_gejala',
-            'nama',
-            'nilai',
-            'id_kategori',
+            'id_biodata',
+            'nama_lengkap',
+            'jenis_kelamin',
+            'tempat_lahir',
+            'tanggal_lahir',
+            // 'alamat:ntext',
+            // 'telp',
+            // 'id_biodata_detail',
+            // 'id_user',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

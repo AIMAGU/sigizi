@@ -37,7 +37,7 @@ class Kategori extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id_kategori' => 'Id Kategori',
+            'id_kategori' => 'Kategori',
             'nama' => 'Nama',
         ];
     }
